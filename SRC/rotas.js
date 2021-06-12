@@ -13,15 +13,15 @@ import Login from './login/login';
 export default function Rotas() { //Exporta para que possa ser "visto" no resto do aplicativo
     return (
         <NavigationContainer>
-            <AppStack.Navigator screenOptions={{ headerShown: false }}>
-                <AppStack.Screen name="Inicio" component={Inicio} />
-            </AppStack.Navigator>
-            <AppStack.Navigator screenOptions={{ headerShown: false }}>
-                <AppStack.Screen name="Cadastro" component={Cadastro} />
-            </AppStack.Navigator>
+            
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Login" component={Login} />
+              
+                <AppStack.Screen name="Cadastro" component={Cadastro} />
+            
+                <AppStack.Screen name="Inicio" component={Inicio} />
             </AppStack.Navigator>
+            
         </NavigationContainer>
     );
 }

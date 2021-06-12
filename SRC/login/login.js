@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import { StyleSheet, Scrollview, Keyboard, TextInput, View, Image, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import Logo from '../../../assets/logo.png';
+import User from '../../assets/user.png';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
-export default class Cadastro extends Component {
+export default class Login extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+    nome: "",
+    senha: "",
+    estilo:"",
+    };
+  }
 
   render() {
 
@@ -20,29 +29,36 @@ export default class Cadastro extends Component {
          <TouchableOpacity 
             style = {styles.seta}
             onPress = {()=> goBack()}>
-              <Feather name="chevron-left" size={38} color="#0B0D88" />
+              <Feather name="chevron-left" size={38} color="black" />
           </TouchableOpacity>
+
           <Image 
-            source={Logo} 
-            style={styles.logo} />
-          <Text style={styles.titulo}>Bem vinde</Text>
+              source={User} 
+              style={styles.user} />
+         
+          <Text style={styles.titulo}>Login</Text>
+
+
+          <View style={styles.containerr}>
+
           <View style={styles.forms}>
 
+          <Text style={styles.ttitulo}>E-mail/CPF:</Text>
 
           <TextInput 
             value={this.state.nome}
             style = {styles.input}
-            placeholder = 'Nome Artístico'
             onChangeText = {texto => this.setState({nome : texto})} 
           />
 
           </View>
           <View style={styles.forms}>
 
+
+          <Text style={styles.tttitulo}>Senha:</Text>
           <TextInput 
             value={this.state.senha}
             style = {styles.input}
-            placeholder = 'Segredo'
             onChangeText = {texto => this.setState({senha : texto})}
             secureTextEntry={true}
           />
@@ -51,17 +67,10 @@ export default class Cadastro extends Component {
           <View style={styles.forms}>
 
 
-          <TextInput 
-            value={this.state.estilo}
-            style = {styles.input}
-            placeholder = 'Estilo preferido'
-            onChangeText = {texto => this.setState({estilo : texto})} 
-          />
-
           </View>
-          <TouchableOpacity style = {styles.button} onPress = { this.fazCadastro }><Text style={{color: 'white'}}>Entrar</Text></TouchableOpacity>
-      </View>
-
+          <TouchableOpacity style = {styles.button} ><Text style={{color: 'white' , fontSize: 20}}>Confirmar</Text></TouchableOpacity>
+          </View>
+  </View>
       );
   }
 
@@ -74,8 +83,19 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#95d4de',
+    backgroundColor: '#078f47',
     
+  },
+
+  containerr: {
+    flex: 1,
+    backgroundColor: 'white',
+    borderRadius: 45,
+    marginLeft: 15,
+    marginRight: 15,
+    marginTop: -18,
+    marginBottom: 48,
+
   },
 
   forms: {
@@ -87,22 +107,23 @@ const styles = StyleSheet.create({
     marginRight: 20,
     padding:10,
     borderStyle: 'solid',
-    borderColor: "#4682b4",
-    borderWidth: 2,
+    borderColor: "#2887bd",
+    borderWidth: 3,
     borderRadius: 15,
     shadowRadius: 0.5,
-    backgroundColor: "#E5E6E8",
+    backgroundColor: "white",
     marginBottom: '10%',
     width: 200,
     textAlign: 'center',
 
   },
-  logo: {
-    width: 450,
-    height: 250,
-    marginTop: -110,
+  user: {
+    width: 180,
+    height: 180,
+    marginTop: -55,
     resizeMode : "contain",
-    marginLeft: -81,
+    marginLeft: 70,
+    borderRadius: 100,
   },
 
   subTitulo: {
@@ -113,11 +134,31 @@ const styles = StyleSheet.create({
   },
   titulo: {
       textAlign: 'center',
-      color: '#fe7f51',
+      color: 'white',
       fontWeight: 'bold',
-      paddingBottom: '3%',
-      fontSize: 30,
+      paddingBottom: '13%',
+      fontSize: 28,
+      marginTop: -30,
   },
+
+  ttitulo: {
+    textAlign: 'left',
+    color: 'black',
+    fontWeight: 'bold',
+    paddingBottom: '3%',
+    fontSize: 20,
+    marginLeft: -80,
+    marginTop: 18,
+},
+
+tttitulo: {
+  textAlign: 'left',
+  color: 'black',
+  fontWeight: 'bold',
+  paddingBottom: '3%',
+  fontSize: 20,
+  marginLeft: -120
+},
   seta: {
       marginTop: 30,
   },
@@ -144,16 +185,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 15,
     paddingHorizontal: 40,
-    backgroundColor: "#fe7f51",
+    backgroundColor: "#2887bd",
     textAlign: 'center',
-    borderColor: '#4682b4',
-    borderWidth: 2,
-    shadowColor: 'white',
-    shadowOpacity: 0.4,
-    shadowRadius: 3,
-    shadowOffset: {
-    height: 1,
-    width: 1 },
     alignSelf: 'center',
     marginBottom: 20,
   },
