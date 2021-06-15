@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     borderRadius: 45,
     marginLeft: 15,
     marginRight: 15,
-    marginTop: -18,
-    marginBottom: 48,
+    marginTop: -20,
+    marginBottom: 53,
 
   },
 
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   input: { //Caixa do Formulário
     marginLeft: 20,
     marginRight: 20,
-    padding:10,
+    padding:7,
     borderStyle: 'solid',
     borderColor: "#2887bd",
     borderWidth: 3,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
       color: 'white',
       fontWeight: 'bold',
       paddingBottom: '13%',
-      fontSize: 28,
+      fontSize: 23,
       marginTop: -30,
   },
 
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
     paddingBottom: '3%',
-    fontSize: 20,
+    fontSize: 18,
     marginLeft: -80,
     marginTop: 18,
 },
@@ -156,7 +156,7 @@ tttitulo: {
   color: 'black',
   fontWeight: 'bold',
   paddingBottom: '3%',
-  fontSize: 20,
+  fontSize: 18,
   marginLeft: -120
 },
   seta: {
@@ -183,11 +183,14 @@ tttitulo: {
 
   button: {
     borderRadius: 10,
-    paddingVertical: 15,
+    paddingVertical: 14,
     paddingHorizontal: 40,
     backgroundColor: "#2887bd",
     textAlign: 'center',
     alignSelf: 'center',
     marginBottom: 20,
+    borderColor: 'black',
+    borderWidth: 2,
+    marginTop:10,
   },
 });

@@ -6,8 +6,11 @@ import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
+
 export default function tela () {
-  const navigation = useNavigation ();
+
+const navigation = useNavigation ();
+
 return (
   <View style={styles.container}>
     <Image 
@@ -27,6 +30,9 @@ return (
   </View>
   );
 }
+
+
+
 const styles = StyleSheet.create({
   button: {
     borderRadius: 10,

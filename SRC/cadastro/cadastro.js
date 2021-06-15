@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Scrollview, Keyboard, TextInput, View, Image, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import Cadastro from '../../assets/cadastro.png';
+import Foto from '../../assets/foto.png';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
@@ -33,8 +33,8 @@ export default class Cadastro extends Component {
           </TouchableOpacity>
 
           <Image 
-              source={Cadastro} 
-              style={styles.cadastro} />
+              source={Foto} 
+              style={styles.foto} />
          
           <Text style={styles.titulo}>Cadastrar</Text>
 
@@ -56,6 +56,7 @@ export default class Cadastro extends Component {
 
 
           <Text style={styles.ttitulo}>Telefone:</Text>
+
           <TextInput 
             value={this.state.telefone}
             style = {styles.input}
@@ -67,6 +68,7 @@ export default class Cadastro extends Component {
 
 
           <Text style={styles.ttitulo}>E-mail:</Text>
+
           <TextInput 
             value={this.state.nome}
             style = {styles.input}
@@ -77,6 +79,7 @@ export default class Cadastro extends Component {
           <View style={styles.forms}>
 
           <Text style={styles.ttitulo}>Senha:</Text>
+
           <TextInput 
             value={this.state.senha}
             style = {styles.input}
@@ -112,8 +115,8 @@ const styles = StyleSheet.create({
     borderRadius: 45,
     marginLeft: 15,
     marginRight: 15,
-    marginTop: -18,
-    marginBottom: 48,
+    marginTop: -70,
+    marginBottom: 15,
 
   },
 
@@ -124,22 +127,22 @@ const styles = StyleSheet.create({
   input: { //Caixa do Formulário
     marginLeft: 20,
     marginRight: 20,
-    padding:10,
+    padding:7,
     borderStyle: 'solid',
     borderColor: "#2887bd",
     borderWidth: 3,
     borderRadius: 15,
     shadowRadius: 0.5,
     backgroundColor: "white",
-    marginBottom: '10%',
+    marginBottom: '1%',
     width: 200,
     textAlign: 'center',
 
   },
-  cadastro: {
+  foto: {
     width: 180,
     height: 180,
-    marginTop: -55,
+    marginTop: -75,
     resizeMode : "contain",
     marginLeft: 70,
     borderRadius: 100,
@@ -149,9 +152,9 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       color: 'white',
       fontWeight: 'bold',
-      paddingBottom: '13%',
-      fontSize: 28,
-      marginTop: -30,
+      paddingBottom: '25%',
+      fontSize: 23,
+      marginTop: -38,
   },
 
   ttitulo: {
@@ -159,9 +162,9 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
     paddingBottom: '3%',
-    fontSize: 20,
+    fontSize: 16,
     marginLeft: -80,
-    marginTop: 18,
+    marginTop: 8,
 },
 
 
@@ -189,11 +192,14 @@ const styles = StyleSheet.create({
 
   button: {
     borderRadius: 10,
-    paddingVertical: 15,
+    paddingVertical: 12,
     paddingHorizontal: 40,
     backgroundColor: "#2887bd",
     textAlign: 'center',
     alignSelf: 'center',
     marginBottom: 20,
+    marginTop: 12,
+    borderColor: 'black',
+    borderWidth: 2,
   },
 });
