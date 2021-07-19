@@ -21,8 +21,10 @@ export default class Login extends Component {
   render() {
 
     const { goBack } = this.props.navigation;
+    
 
       return(
+        
 
         <View style={styles.container}>
          
@@ -68,7 +70,12 @@ export default class Login extends Component {
 
 
           </View>
-          <TouchableOpacity style = {styles.button} ><Text style={{color: 'white' , fontSize: 20}}>Confirmar</Text></TouchableOpacity>
+          <TouchableOpacity style = {styles.button}  
+          //onPress = {() => this.props.navigation.navigate('dashboard') }
+          >
+          <Text style={{color: 'white' , fontSize: 20}}>Confirmar</Text>
+          </TouchableOpacity>
+
           </View>
   </View>
       );
