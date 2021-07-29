@@ -11,6 +11,7 @@ import Login from './login/login';
 import Dashboard from './dashboard/dashboard';
 import Menu from './menu/menu';
 import Perfil from './perfil/perfil';
+import Usuario from './usuario/usuario';
 
 
 export default function Rotas() { //Exporta para que possa ser "visto" no resto do aplicativo
@@ -19,7 +20,7 @@ export default function Rotas() { //Exporta para que possa ser "visto" no resto 
             
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 
-                <AppStack.Screen name="Login" component={Login} />
+                <AppStack.Screen name="Usuario" component={Usuario} />
                 
                 <AppStack.Screen name="Perfil" component={Perfil} />  
                 
@@ -30,6 +31,8 @@ export default function Rotas() { //Exporta para que possa ser "visto" no resto 
                 <AppStack.Screen name="Inicio" component={Inicial} />  
                 
                 <AppStack.Screen name="Cadastro" component={Cadastro} />      
+
+                <AppStack.Screen name="Login" component={Login} />
 
             </AppStack.Navigator>
             

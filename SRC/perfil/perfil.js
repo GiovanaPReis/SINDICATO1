@@ -25,14 +25,14 @@ export default class Perfil extends Component {
       return(
 
         <View style={styles.container}>
-          
-          <TouchableOpacity
-              style = {styles.seta}
-              onPress = {()=> goBack()}>
-                <Feather name="chevron-left" size={38} color="black" />
-            </TouchableOpacity>
 
             <View style={styles.containerr}>
+
+                <TouchableOpacity
+                  style = {styles.seta}
+                  onPress = {()=> goBack()}>
+                      <Feather name="chevron-left" size={38} color="black" />
+                </TouchableOpacity>
                         
                 <Image
                     source={Sindicato} 
@@ -62,61 +62,59 @@ const styles = StyleSheet.create({
     },
 
     seta: {
-        marginTop: 30,
+        marginTop: 6,
     },
    
     containerr: {
         flex: 1,
-        backgroundColor: 'black',
-        borderRadius: 45,
+        backgroundColor: "#078f47",
+        borderRadius: 15,
         marginLeft: 15,
         marginRight: 15,
-        marginTop: -20,
-        marginBottom: 53,
+        marginTop: 220,
+        marginBottom: 300
     
       },
 
     sindicato: {
         width: 180,
         height: 180,
-        marginTop: -55,
+        marginTop: -50,
         resizeMode : "contain",
-        marginLeft: 70,
         borderRadius: 100,
       },
 
     subTitulo: {
-        textAlign: 'center',
+        width: 350,
+        height: 120,
+        textAlign: 'right',
         color: 'black',
         fontWeight: 'bold',
+        fontSize: 20,
+        marginTop: -158,
         paddingBottom: '5%',
     },
 
     titulo: {
-        textAlign: 'center',
+        textAlign: 'right',
         color: 'black',
         fontWeight: 'bold',
-        paddingBottom: '13%',
-        fontSize: 23,
-        marginTop: -30,
+        marginTop: -300,
+        paddingBottom: '5%%',
     },
   
     ttitulo: {
-        textAlign: 'left',
+        textAlign: 'right',
         color: 'black',
         fontWeight: 'bold',
-        paddingBottom: '3%',
-        fontSize: 18,
-        marginLeft: -80,
-        marginTop: 18,
+        paddingBottom: '5%',
+
     },
   
     tttitulo: {
-        textAlign: 'left',
+        textAlign: 'right',
         color: 'black',
         fontWeight: 'bold',
-        paddingBottom: '3%',
-        fontSize: 18,
-        marginLeft: -120
+        paddingBottom: '5%',
     },
 });

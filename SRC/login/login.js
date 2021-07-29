@@ -69,7 +69,6 @@ console.log (e);
          
           <Text style={styles.titulo}>Login</Text>
 
-
           <View style={styles.containerr}>
 
           <View style={styles.forms}>
