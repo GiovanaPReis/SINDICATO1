@@ -18,6 +18,35 @@ export default class Login extends Component {
     };
   }
 
+  guardadados = async () => {
+    var resultado = 0;
+    try{
+
+    await AsyncStorage.setItem('nome', this.state.nome)
+    await AsyncStorage.setItem('senha', this.state.senha)
+    Keyboard.dismiss();
+    }catch (e){
+        Alert.alert("Erro!", "A sua mensagem não foi enviada");
+console.log (e);
+    }
+
+  
+    const valores = await AsyncStorage.multiGet(['nome','senha']);
+    await axios.post('http://flick-administrativo.herokuapp.com/api/loginApp', {valores})
+    .then(function (response) {
+    console.log (response.data.nome)
+    AsyncStorage.setItem('nomelogin', JSON.stringify( response.data.nome))
+    AsyncStorage.setItem('cpf',  JSON.stringify (response.data.cpf))
+    AsyncStorage.setItem('emaillogin',  JSON.stringify (response.data.email))
+  
+    }) 
+   var teste = await AsyncStorage.getItem ('nomelogin')
+   console.log (teste)
+    Alert.alert("Sucesso!", "A sua mensagem foi enviada com sucesso!");
+
+    this.props.navigation.navigate('Menu', {'nome': this.state.nome})
+}
+
   render() {
 
     const { goBack } = this.props.navigation;
