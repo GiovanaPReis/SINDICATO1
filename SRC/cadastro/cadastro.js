@@ -13,9 +13,45 @@ export default class Cadastro extends Component {
     super(props);
     this.state = {
     nome: "",
+    telefone: "",
+    email: "",
     senha: "",
-    estilo:"",
+    confirmarSenha: "",
     };
+  }
+  
+  fazCadastro = async ()  => {
+    var erro = null;
+    if(this.state.senha == this.state.confirmarSenha){
+      try{
+        await AsyncStorage.setItem('@nome', this.state.nome)
+        await AsyncStorage.setItem('@telefone', this.state.telefone)
+        await AsyncStorage.setItem('@email', this.state.email)
+        await AsyncStorage.setItem('@senha', this.state.senha)
+        Keyboard.dismiss();
+      } catch(e) {
+        console.log(e)
+      }
+
+      let keys;
+      keys = await AsyncStorage.getAllKeys();
+      const valores = await AsyncStorage.multiGet(keys);
+
+      try{
+        await axios.post('https://sindicato-software.herokuapp.com/api/registrarApp', {valores})
+      } catch (e) {
+      console.log(e)
+      erro = e;
+      }
+      if(erro == null) {
+        this.props.navigation.navigate('Produtos')
+      } else {
+        console.log(erro)
+        Alert.alert("Erro!", "FFFFFF");
+      }
+  }else{
+    Alert.alert("Senha incorreta", "A sua senha não está igual à sua confirmação. Tente novamente!");
+  }
   }
 
   render() {
