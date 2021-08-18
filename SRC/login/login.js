@@ -32,7 +32,7 @@ console.log (e);
 
   
     const valores = await AsyncStorage.multiGet(['nome','senha']);
-    await axios.post('http://flick-administrativo.herokuapp.com/api/loginApp', {valores})
+    await axios.post('https://sindicato-software.herokuapp.com/api/loginApp', {valores})
     .then(function (response) {
     console.log (response.data.nome)
     AsyncStorage.setItem('nomelogin', JSON.stringify( response.data.nome))

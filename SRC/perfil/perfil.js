@@ -37,14 +37,14 @@ export default class Perfil extends Component {
                 <Image
                     source={Sindicato} 
                     style={styles.sindicato} />
-                
+
                 
                 <View style={styles.coluna}>
                     <Text style={styles.subTitulo}>SÓCIO 13274175175</Text>
-                    <Text style={styles.texto}>José da Silva</Text>
-                    <Text style={styles.ttexto}>+55(DD) 9999-9999</Text>
-                    <Text style={styles.tttexto}>email@email.com</Text>
-                    <Text style={styles.ttttexto}>405.606.522-52</Text>
+                    <Text style={styles.titulo}>José da Silva</Text>
+                    <Text style={styles.titulo}>+55(DD) 9999-9999</Text>
+                    <Text style={styles.titulo}>email@email.com</Text>
+                    <Text style={styles.titulo}>405.606.522-52</Text>
                 </View>
             </View>
         
@@ -71,9 +71,8 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginLeft: 15,
         marginRight: 15,
-        marginTop: 220,
-        marginBottom: 300
-    
+        marginTop: 150,
+        marginBottom: 300,
       },
 
     sindicato: {
@@ -82,6 +81,7 @@ const styles = StyleSheet.create({
         marginTop: -50,
         resizeMode : "contain",
         borderRadius: 100,
+        display: "flex",
       },
 
     subTitulo: {
@@ -90,31 +90,18 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         color: 'black',
         fontWeight: 'bold',
-        fontSize: 20,
-        marginTop: -158,
-        paddingBottom: '5%',
+        fontSize: 22,
+        marginTop: -150,
+        marginBottom: '-22%',
     },
 
     titulo: {
-        textAlign: 'right',
+        textAlign: 'left',
         color: 'black',
         fontWeight: 'bold',
-        marginTop: -300,
-        paddingBottom: '5%%',
-    },
-  
-    ttitulo: {
-        textAlign: 'right',
-        color: 'black',
-        fontWeight: 'bold',
-        paddingBottom: '5%',
-
-    },
-  
-    tttitulo: {
-        textAlign: 'right',
-        color: 'black',
-        fontWeight: 'bold',
-        paddingBottom: '5%',
+        fontSize: 15,
+        marginRight: "20%",
+        marginLeft: "40%",
+        paddingBottom: '-1%',
     },
 });

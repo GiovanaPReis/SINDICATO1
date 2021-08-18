@@ -26,11 +26,19 @@ export default class Usuario extends Component {
 
         <View style={styles.container}>
 
+                <TouchableOpacity
+                  style = {styles.seta}
+                  onPress = {()=> goBack()}>
+                      <Feather name="chevron-left" size={38} color="black" />
+                </TouchableOpacity>
+
             <View style={styles.containerr}>
-                        
-                <Image
+
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Perfil')} >          
+              <Image
                     source={Logo} 
-                    style={styles.Logo} />
+                    style={styles.logo} />
+            </TouchableOpacity> 
                 
             </View>
         
@@ -44,12 +52,12 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: 'white',
-      
+
     },
 
     seta: {
-        marginTop: 6,
-    },
+      marginTop: 30,
+  },
    
     containerr: {
         flex: 1,
@@ -57,19 +65,17 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginLeft: 15,
         marginRight: 15,
-        marginTop: 220,
-        marginBottom: 300
-    
+        marginTop: 150,
+        marginBottom: 250,
+        justifyContent: "center",
+        alignItems: "center"
       },
 
-    logo: {
-        width: 50,
-        height: 50,
-        borderRadius: 15,
-        marginLeft: 15,
-        marginRight: 15,
-        marginTop: 200,
-        resizeMode : "contain",
-        borderRadius: 50,
-      }
+      logo: {
+        width: 150,
+        height: 150,
+        marginTop: -10,
+        marginBottom: 0,
+        borderRadius: 150,
+      },
 });

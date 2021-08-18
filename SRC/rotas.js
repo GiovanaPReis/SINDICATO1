@@ -20,9 +20,9 @@ export default function Rotas() { //Exporta para que possa ser "visto" no resto 
             
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 
-                <AppStack.Screen name="Usuario" component={Usuario} />
+                <AppStack.Screen name="Usuario" component={Usuario} /> 
                 
-                <AppStack.Screen name="Perfil" component={Perfil} />  
+                <AppStack.Screen name="Perfil" component={Perfil} /> 
                 
                 <AppStack.Screen name="Menu" component={Menu} />  
                 
