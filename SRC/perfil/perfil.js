@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: 'white',
-      
     },
 
     seta: {
@@ -71,18 +70,18 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginLeft: 15,
         marginRight: 15,
-        marginTop: 150,
-        marginBottom: 300,
-      },
+        marginTop: 220,
+        marginBottom: 250,
+    },
 
     sindicato: {
         width: 180,
         height: 180,
-        marginTop: -50,
+        marginTop: -40,
         resizeMode : "contain",
         borderRadius: 100,
         display: "flex",
-      },
+    },
 
     subTitulo: {
         width: 350,
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         fontSize: 22,
-        marginTop: -150,
+        marginTop: -125,
         marginBottom: '-22%',
     },
 
@@ -100,8 +99,9 @@ const styles = StyleSheet.create({
         color: 'black',
         fontWeight: 'bold',
         fontSize: 15,
-        marginRight: "20%",
-        marginLeft: "40%",
+        marginTop: 15,
+        marginRight: "0%",
+        marginLeft: "47%",
         paddingBottom: '-1%',
     },
 });
