@@ -12,6 +12,7 @@ import Dashboard from './dashboard/dashboard';
 import Menu from './menu/menu';
 import Perfil from './perfil/perfil';
 import Usuario from './usuario/usuario';
+import Categoria from './categoria/categoria';
 
 
 export default function Rotas() { //Exporta para que possa ser "visto" no resto do aplicativo
@@ -20,7 +21,13 @@ export default function Rotas() { //Exporta para que possa ser "visto" no resto 
             
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 
+<<<<<<< HEAD
                 <AppStack.Screen name="Usuario" component={Usuario} /> 
+=======
+                <AppStack.Screen name="Categoria" component={Categoria} />
+                
+                <AppStack.Screen name="Usuario" component={Usuario} />
+>>>>>>> 257f03769b085e46381e62d265423eb86efec548
                 
                 <AppStack.Screen name="Perfil" component={Perfil} /> 
                 
